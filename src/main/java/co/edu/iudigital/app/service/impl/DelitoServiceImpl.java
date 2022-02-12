@@ -29,15 +29,15 @@ public class DelitoServiceImpl implements IDelitoService{
 	public List<DelitoDto> findAll() {
 		List<Delito> delitos = delitoRepository.findAll();
 		List<DelitoDto> delitosDto = new ArrayList<>();
-		// primera forma
+		// forma uno
 		/*for(Delito delito : delitos) {
 			DelitoDto delitoDto = new DelitoDto();
 			delitoDto.setId(delito.getId());
 			delitoDto.setNombre(delito.getNombre());
 			delitoDto.setDescripcion(delito.getDescripcion());
-			delitosDto.add(delitoDto);
+			delitosDto.add(delitoDto); // creo el objeto y luego lo agrego
 		}*/
-		// segunda forma
+		// forma 2
 		delitos.stream()
 			   .forEach(d -> {
 				   DelitoDto delitoDto = new DelitoDto();

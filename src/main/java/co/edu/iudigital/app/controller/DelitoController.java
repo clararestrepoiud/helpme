@@ -31,7 +31,7 @@ import io.swagger.annotations.Tag;
 
 @Api(value="/delitos", tags= {"Delitos"})
 @SwaggerDefinition(tags = {
-		@Tag(name = "Delitos", description = "Gestion API delitos")
+		@Tag(name = "Delitos", description = "Gestion de API delitos")
 })
 /*TODO: COLOCAR ENDPOINTS CON RESPONSEENTITY<>*/
 public class DelitoController {
@@ -41,7 +41,8 @@ public class DelitoController {
 	@Autowired
 	private IDelitoService delitoService;
 	
-	/*@Autowired
+	/*esto es otra opcion
+	 * @Autowired
 	public DelitoController( IDelitoService delitoService) {
 		this.delitoService = delitoService
 	}*/
