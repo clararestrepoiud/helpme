@@ -38,6 +38,8 @@ public class Delito implements Serializable{
 	@JoinColumn(name = "usuarios_id")
 	private Usuario usuario;
 
+	/**parametros get y set*/
+	
 	/**
 	 * @return the id
 	 */

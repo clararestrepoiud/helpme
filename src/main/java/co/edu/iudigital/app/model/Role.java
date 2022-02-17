@@ -36,6 +36,8 @@ public class Role implements Serializable{
 	@ManyToMany(mappedBy = "roles")
 	private List<Usuario> usuarios;
 
+	/**parametros get y set*/
+	
 	/**
 	 * @return the id
 	 */

@@ -67,6 +67,8 @@ public class Usuario implements Serializable{
 	inverseJoinColumns = {@JoinColumn(name = "roles_id")})
 	private List<Role> roles;
 
+	/**parametros get y set*/
+	
 	/**
 	 * @return the id
 	 */

@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * Entidad de casos
@@ -31,15 +32,23 @@ public class Caso implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	
 	@Column(name = "fecha_hora")
 	private LocalDateTime fechaHora;
 	
+	@NotNull(message="Latitud no puede ser nula")
 	private float latitud;
 	
+	@NotNull(message="longitud no puede ser nula")
 	private float longitud;
 	
+	@NotNull(message="Altitud no puede ser nula")
+	private float altitud;
+	
+	@NotNull(message="visible no puede ser nula")
 	private Boolean visible;
 
+	@NotNull(message="descripcion no puede ser nula")
 	private String descripcion;
 	
 	@Column(name = "url_map")
@@ -63,6 +72,8 @@ public class Caso implements Serializable{
 		}
 	}
 
+	/**Parametros get y Set */
+	
 	/**
 	 * @return the id
 	 */
@@ -103,6 +114,20 @@ public class Caso implements Serializable{
 	 */
 	public void setLatitud(float latitud) {
 		this.latitud = latitud;
+	}
+	
+	/**
+	 * @return the altitud
+	 */
+	public float getAltitud() {
+		return altitud;
+	}
+
+	/**
+	 * @param latitud the altitud to set
+	 */
+	public void setAltitud(float altitud) {
+		this.altitud = altitud;
 	}
 
 	/**
